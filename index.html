@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<link rel="stylesheet" href="styles.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar 
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+  </div>
+-->
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="bgColor" class="w3-container w3-orange">
+    
+    <h1 id="greeting" class="w3-center w3-xxxlarge font-effect-fire">Grab Your Coffee And Start Your Morning With The A Donut!!!</h1>
+
+    <img class="w3-hide-medium w3-hide-small w3-large" id="sun" src="sunny.png" alt="" srcset="">
+    <img class="w3-hide-medium w3-hide-small w3-large" id="moon" src="moon.png" alt="" srcset="" style="display:none">
+    <img class="w3-hide-medium w3-hide-small w3-large"  id="mountain1" src="mountain.png" alt="">
+    <img class="w3-hide-medium w3-hide-small w3-large " id="mountain2" src="mountain.png" alt="">
+    
+   
+   
+
+    
+     
+    
+    
+    <img class="w3-hide-medium w3-hide-small w3-large" id="pine" src="pine-tree.png" alt="" srcset="">
+    <img class="w3-hide-medium w3-hide-small w3-large" id="tree1" src="tree.png" alt="">
+   
+    
+</header>
+
+<!-- First Grid -->
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i id="coffee" class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right font-effect-fire"></i>
+      <i id="tea" class="fa fa-coffee w3-padding-64 w3-text-blue w3-margin-right font-effect-fire" style="display:none"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1 class="w3-center w3-xxxlarge font-effect-fire">The Daily Hearld</h1>
+      
+      <p id="article" class="w3-large">In this example, depending on the time of the day, the sun and the background color change to match the time of day.
+      There are 3 day changes: morning, afternoon, and evening.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Fun Fact: Chicago is on Lake Michigan.</h1>
+</div>
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script type="text/javascript">
+  var currentTime = new Date().getHours();
+  if (document.body) {
+      if ( 10 <= currentTime  &&  currentTime <= 18) {
+        document.getElementById("greeting").innerHTML = "Its Lunch. Lets Grab The Local Paper.";
+        document.getElementById("article").innerHTML = "In this example, depending on the time of the day, the sun and the background color change to match the time of day.There are 3 day changes: morning, afternoon, and evening. And Since it is NOON get out your SunGlasses.";
+        document.getElementById("sun").id= "sunNoon";
+        document.getElementById("bgColor").className="w3-pale-blue";
+      }
+
+      else if ( 18 <= currentTime  &&  2 <=  currentTime) {
+        
+        document.getElementById("greeting").innerHTML = "Pop Some Popcorn, Brew Some Tea, And Lets Read A Good Book.";
+        document.getElementById("article").innerHTML = "In this example, depending on the time of the day, the sun and the background color change to match the time of day.There are 3 day changes: morning, afternoon, and evening. And Since it is EVENING or NIGHT the Moon is out.";                                                                                                            
+        document.getElementById("moon").style.display='block';
+        document.getElementById("sun").style.display='none';
+        document.getElementById("tea").style.display='block';
+        document.getElementById("coffee").style.display='none';
+        document.getElementById("bgColor").className="w3-indigo";
+          
+          
+      }
+      else {
+
+          document.getElementById("sunNoon").id= "sun";
+          document.getElementById("bgColor").className="w3-orange";
+      } 
+  }
+  </script>
+
+</body>
+</html>
